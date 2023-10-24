@@ -1,0 +1,148 @@
+<html>
+    <head>
+        <title>
+            flipkart
+        </title>
+    </head>
+    <body>
+        <h1>Its rendering</h1>
+        <form method="POST">
+    
+                {% csrf_token %}
+                <input type="text"  name="productname" placeholder="Product name" id="productname">
+                <input type="submit"  value="fetch">
+        </form>
+
+        <table>
+            <tr>
+              <th>Product Info</th>
+              <th>Price</th>
+              <th>Image</th>
+              <th>Link</th>
+              <th>Sold By</th>
+              <th>Rating</th>
+            </tr>
+            
+            
+            <tr>
+                <td>{{pname.0.productInfo}}</td>
+                <td>{{pname.0.price}}</td>
+                {%if pname%}
+                <td><img src="{{pname.0.img}}" height="100" weight="100" ></td>
+                {%endif%}
+                <td><a href="https://www.flipkart.com{{pname.0.link}}">click here</a></td>
+                <td>{{pname.0.soldby}}</td>
+                <td>{{pname.0.rating}}</td>
+            </tr>
+
+            <tr>
+                <td>{{pname.1.productInfo}}</td>
+                <td>{{pname.1.price}}</td>
+                {%if pname%}
+                <td><img src="{{pname.1.img}}" height="100" weight="100" ></td>
+                {%endif%}
+                <td><a href="https://www.flipkart.com{{pname.1.link}}">click here</a></td>
+                <td>{{pname.1.soldby}}</td>
+                <td>{{pname.1.rating}}</td>
+            </tr>
+
+            <tr>
+                <td>{{pname.2.productInfo}}</td>
+                <td>{{pname.2.price}}</td>
+                {%if pname%}
+                <td><img src="{{pname.2.img}}" height="100" weight="100" ></td>
+                {%endif%}
+                <td><a href="https://www.flipkart.com{{pname.2.link}}">click here</a></td>
+                <td>{{pname.2.soldby}}</td>
+                <td>{{pname.2.rating}}</td>
+            </tr>
+
+            <tr>
+                <td>{{pname.3.productInfo}}</td>
+                <td>{{pname.3.price}}</td>
+                {%if pname%}
+                <td><img src="{{pname.3.img}}" height="100" weight="100" ></td>
+                {%endif%}
+                <td><a href="https://www.flipkart.com{{pname.3.link}}">click here</a></td>
+                <td>{{pname.3.soldby}}</td>
+                <td>{{pname.3.rating}}</td>
+            </tr>
+
+            <tr>
+                <td>{{pname.4.productInfo}}</td>
+                <td>{{pname.4.price}}</td>
+                {%if pname%}
+                <td><img src="{{pname.4.img}}" height="100" weight="100" ></td>
+                {%endif%}
+                <td><a href="https://www.flipkart.com{{pname.4.link}}">click here</a></td>
+                <td>{{pname.4.soldby}}</td>
+                <td>{{pname.4.rating}}</td>
+            </tr>
+            
+            <!--<td>{{pname.item.productInfo}}</td>
+              <td>{{pname.item.price}}</td>
+              <td>{{pname.item.link}}</td>
+              <td>{{pname.item.img}}</td>-->
+              <tr>
+                <td>{{pname2.0.productInfo}}</td>
+                <td>{{pname2.0.price}}</td>
+                {%if pname2%}
+                <td><img src="{{pname2.0.img}}" height="100" weight="100" ></td>
+                {%endif%}
+                <td><a href="{{pname2.0.link}}">click here</a></td>
+                <td>{{pname2.0.soldby}}</td>
+                <td>{{pname2.0.rating}}</td>
+            </tr>
+
+            <tr>
+                <td>{{pname2.1.productInfo}}</td>
+                <td>{{pname2.1.price}}</td>
+                {%if pname2%}
+                <td><img src="{{pname2.1.img}}" height="100" weight="100" ></td>
+                {%endif%}
+                <td><a href="{{pname2.1.link}}">click here</a></td>
+                <td>{{pname2.1.soldby}}</td>
+                <td>{{pname2.1.rating}}</td>
+            </tr>
+
+            <tr>
+                <td>{{pname2.2.productInfo}}</td>
+                <td>{{pname2.2.price}}</td>
+                {%if pname2%}
+                <td><img src="{{pname2.2.img}}" height="100" weight="100" ></td>
+                {%endif%}
+                <td><a href="{{pname2.2.link}}">click here</a></td>
+                <td>{{pname2.2.soldby}}</td>
+                <td>{{pname2.2.rating}}</td>
+            </tr>
+
+            <tr>
+                <td>{{pname2.3.productInfo}}</td>
+                <td>{{pname2.3.price}}</td>
+                {%if pname2%}
+                <td><img src="{{pname2.3.img}}" height="100" weight="100" ></td>
+                {%endif%}
+                <td><a href="{{pname2.3.link}}">click here</a></td>
+                <td>{{pname2.3.soldby}}</td>
+                <td>{{pname2.3.rating}}</td>
+            </tr>
+
+            <tr>
+                <td>{{pname2.4.productInfo}}</td>
+                <td>{{pname2.4.price}}</td>
+                {%if pname2%}
+                <td><img src="{{pname2.4.img}}" height="100" weight="100" ></td>
+                {%endif%}
+                <td><a href="{{pname2.4.link}}">click here</a></td>
+                <td>{{pname2.4.soldby}}</td>
+                <td>{{pname2.4.rating}}</td>
+            </tr>
+        </table>
+        
+        {{pname2}}
+
+
+        
+    </body>
+
+</html>
