@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>
+            flipkart
+        </title>
+    </head>
+    <body>
+        <h1>Its rendering</h1>
+        <form method="POST">
+    
+                {% csrf_token %}
+                <input type="text"  name="productname" placeholder="Product name" id="productname">
+                <input type="submit"  value="fetch">
+        </form>
+
+        <table>
+            <tr>
+              <th>Product Info</th>
+              <th>Price</th>
+              <th>Image</th>
+              <th>Link</th>
+              <th>Sold By</th>
+              <th>Rating</th>
+            </tr>
+            {%for item in pname%}
+            <tr>
+                <td>{{item.productInfo}}</td>
+                <td>{{item.price}}</td>
+                {%if pname%}
+                <td><img src="{{item.img}}" height="100" weight="100" ></td>
+                {%endif%}
+                <td><a href="{{item.link}}">click here</a></td>
+                <td>{{item.soldby}}</td>
+                <td>{{item.rating}}</td>
+            </tr>
+            {% endfor %}
+
+            
+            
+        </table>
+        
+
+
+        
+    </body>
+
+</html>
